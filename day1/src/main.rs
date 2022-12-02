@@ -1,16 +1,13 @@
 use std::io;
-//sen a http request to advent of code
-//
+
 fn compute(input: &mut Vec<String>) -> i32 {
     let mut list: Vec::<i32> = Vec::new();
     let mut sum = 0;
     for element in input {
         if element != "" {
-            println!("number: {}", element);
             let i: i32 = element.parse().unwrap();
             sum += i;
         } else {
-            println!("nothing: {}", element);
             list.push(sum);
             sum = 0;
         }
